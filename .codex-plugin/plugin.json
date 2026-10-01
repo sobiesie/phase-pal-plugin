@@ -1,6 +1,6 @@
 {
   "name": "phase-pal",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Control your installed Phase Pal avatar through local MCP tools.",
   "author": {
     "name": "ConsistencyAI",
@@ -37,8 +37,8 @@
     ],
     "brandColor": "#6652CC",
     "brandColorDark": "#B5A8FF",
-    "composerIcon": "./assets/composer-icon.svg",
-    "logo": "./assets/logo.svg"
+    "composerIcon": "./assets/composer-icon.png",
+    "logo": "./assets/logo.png"
   },
   "mcpServers": "./.mcp.json"
 }

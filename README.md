@@ -4,7 +4,7 @@ Connect Codex to the Phase Pal app on your computer. Ask it to check avatar
 status, list animations, play or stop an animation, set an expression, speak
 text, or show and hide the avatar.
 
-![Phase Pal plugin logo](assets/logo.svg)
+![Phase Pal plugin logo](assets/logo.png)
 
 ## Requirements
 
@@ -86,7 +86,7 @@ python3 -m unittest discover -s tests -p 'package_test.py'
 python3 scripts/build-plugin.py
 ```
 
-The script writes `dist/phase-pal-0.2.0.zip` and its SHA-256 file. ZIP entries
+The script writes `dist/phase-pal-0.2.1.zip` and its SHA-256 file. ZIP entries
 have fixed timestamps, order, and permissions. Equal source bytes produce an
 equal ZIP on supported platforms. The package contains only approved files.
 

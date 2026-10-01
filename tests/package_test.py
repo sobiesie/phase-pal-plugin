@@ -39,11 +39,11 @@ class PackageTests(unittest.TestCase):
                 folder = Path(temporary)
                 source = folder / "source"
                 BUILD.export_repository(ROOT, source)
-                icon = source / "assets/logo.svg"
+                icon = source / "assets/logo.png"
                 icon.unlink()
                 if linked:
                     try:
-                        icon.symlink_to(ROOT / "assets/logo.svg")
+                        icon.symlink_to(ROOT / "assets/logo.png")
                     except OSError:
                         self.skipTest("This host does not permit symbolic links")
                 with self.assertRaises(ValueError):

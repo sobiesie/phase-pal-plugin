@@ -2,8 +2,9 @@
 
 Publisher: Consistency AI. Updated: 2026-09-30.
 
-These terms describe use of the Phase Pal plugin. The included source,
-documents, and original SVG artwork use the [MIT License](../LICENSE).
+These terms describe use of the Phase Pal plugin. The included source
+and documents use the [MIT License](../LICENSE). The app logo has the limited
+distribution permission stated in the [notices](../NOTICE).
 The license controls your rights to copy, modify, and distribute that content.
 These terms do not reduce those license rights.
 

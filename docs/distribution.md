@@ -62,6 +62,6 @@ privacy, and terms pages; GitHub Pages is not required.
 5. Confirm the listing links work without a GitHub login.
 
 The build fails if a required file is missing, a package input is a symbolic
-link, the manifests disagree, or an icon fails the square SVG requirements.
+link, the manifests disagree, or an icon fails the square image requirements.
 Never add a runtime descriptor, executable, personal configuration, or secret
 to the build file list.

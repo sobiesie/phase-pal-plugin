@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 import re
 import shutil
+import struct
 import tempfile
 import xml.etree.ElementTree as ET
 import zipfile
@@ -22,8 +23,8 @@ RELEASE_FILES = (
     "README.md",
     "LICENSE",
     "NOTICE",
-    "assets/logo.svg",
-    "assets/composer-icon.svg",
+    "assets/logo.png",
+    "assets/composer-icon.png",
     "docs/assets.md",
     "docs/support.md",
     "docs/privacy.md",
@@ -58,7 +59,7 @@ def read_json(root, relative):
 
 
 def validate_package(root):
-    """Check identity, launcher parity, listing paths, and square SVG assets."""
+    """Check identity, launcher parity, listing paths, and square image assets."""
     for relative in RELEASE_FILES:
         checked_file(root, relative)
     manifest = read_json(root, "plugin.json")
@@ -88,12 +89,20 @@ def validate_package(root):
         asset = checked_file(root, relative)
         if asset.stat().st_size > 5 * 1024 * 1024:
             raise ValueError(f"Asset is larger than 5 MiB: {key}")
-        svg = ET.parse(asset).getroot()
-        if svg.tag != "{http://www.w3.org/2000/svg}svg":
-            raise ValueError(f"Expected SVG: {key}")
-        width, height = float(svg.attrib["width"]), float(svg.attrib["height"])
+        if asset.suffix == ".png":
+            header = asset.read_bytes()[:33]
+            if len(header) != 33 or header[:16] != b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR":
+                raise ValueError(f"Expected a PNG image header: {key}")
+            width, height = struct.unpack(">II", header[16:24])
+            if max(width, height) > 4096:
+                raise ValueError(f"PNG exceeds 4096 pixels: {key}")
+        else:
+            svg = ET.parse(asset).getroot()
+            if svg.tag != "{http://www.w3.org/2000/svg}svg":
+                raise ValueError(f"Expected SVG or PNG: {key}")
+            width, height = float(svg.attrib["width"]), float(svg.attrib["height"])
         if width != height or width < 48:
-            raise ValueError(f"SVG must be square and at least 48 pixels: {key}")
+            raise ValueError(f"Image must be square and at least 48 pixels: {key}")
     mcp = read_json(root, "mcp.json")
     if mcp.get("$schema") != "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json":
         raise ValueError("The portable MCP schema is required")

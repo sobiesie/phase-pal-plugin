@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title">
-  <title id="title">Phase Pal plugin logo</title>
-  <rect width="512" height="512" rx="112" fill="#6652CC"/>
-  <path d="M112 176a56 56 0 0 1 56-56h176a56 56 0 0 1 56 56v120a56 56 0 0 1-56 56H224l-76 56v-62a56 56 0 0 1-36-50Z" fill="#FFF"/>
-  <rect x="180" y="192" width="24" height="48" rx="12" fill="#6652CC"/>
-  <rect x="308" y="192" width="24" height="48" rx="12" fill="#6652CC"/>
-  <path d="M208 272q48 48 96 0" fill="none" stroke="#6652CC" stroke-width="20" stroke-linecap="round"/>
-  <path d="m402 70 8 22 22 8-22 8-8 22-8-22-22-8 22-8Z" fill="#D6CEFF"/>
-</svg>
