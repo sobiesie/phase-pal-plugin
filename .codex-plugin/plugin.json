@@ -1,0 +1,44 @@
+{
+  "name": "phase-pal",
+  "version": "0.2.0",
+  "description": "Control your installed Phase Pal avatar through local MCP tools.",
+  "author": {
+    "name": "ConsistencyAI",
+    "url": "https://phasepal.com"
+  },
+  "homepage": "https://github.com/sobiesie/phase-pal-plugin",
+  "repository": "https://github.com/sobiesie/phase-pal-plugin",
+  "license": "MIT",
+  "keywords": [
+    "phase-pal",
+    "avatar",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Phase Pal",
+    "shortDescription": "Control your local Phase Pal avatar.",
+    "longDescription": "Connect to the installed Phase Pal app. Check status, list animations, play or stop animations, set expressions, speak text, and show or hide the avatar. Requires Phase Pal and local app control.",
+    "developerName": "ConsistencyAI",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/sobiesie/phase-pal-plugin",
+    "supportURL": "https://github.com/sobiesie/phase-pal-plugin/blob/main/docs/support.md",
+    "privacyPolicyURL": "https://github.com/sobiesie/phase-pal-plugin/blob/main/docs/privacy.md",
+    "termsOfServiceURL": "https://github.com/sobiesie/phase-pal-plugin/blob/main/docs/terms.md",
+    "defaultPrompt": [
+      "Show my Phase Pal and play a greeting.",
+      "Make my Phase Pal look happy and speak.",
+      "List the animations my Phase Pal can play."
+    ],
+    "brandColor": "#6652CC",
+    "brandColorDark": "#B5A8FF",
+    "composerIcon": "./assets/composer-icon.svg",
+    "logo": "./assets/logo.svg"
+  },
+  "mcpServers": "./.mcp.json"
+}

@@ -1,0 +1,13 @@
+Phase Pal Plugin
+Copyright (c) 2026 Consistency AI.
+
+The source, documents, and original SVG artwork in this package are covered
+by the adjacent MIT LICENSE. The license does not grant trademark rights in
+Phase Pal, Consistency AI, OpenAI, Codex, GitHub, Steam, or other product names.
+
+The package does not include Phase Pal, Gateway binaries, avatars, animation
+packs, speech models, or other separately licensed application assets.
+
+The two SVG files were drawn for this plugin from geometric shapes. Their
+source and redistribution status are recorded in docs/assets.md. No fonts,
+character likenesses, or third-party artwork are included.

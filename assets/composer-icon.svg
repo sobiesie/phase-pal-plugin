@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Phase Pal composer icon</title>
+  <rect width="128" height="128" rx="28" fill="#6652CC"/>
+  <path d="M24 42a14 14 0 0 1 14-14h52a14 14 0 0 1 14 14v34a14 14 0 0 1-14 14H56l-23 17V89a14 14 0 0 1-9-13Z" fill="#FFF"/>
+  <path d="M46 48v10m36-10v10m-32 12q14 14 28 0" fill="none" stroke="#6652CC" stroke-width="6" stroke-linecap="round"/>
+</svg>

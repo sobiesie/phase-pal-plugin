@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "phase_pal": {
+      "command": "node",
+      "args": [
+        "./scripts/launch-phase-pal-mcp.mjs"
+      ],
+      "cwd": "./",
+      "env_vars": [
+        "HOME",
+        "USERPROFILE",
+        "LOCALAPPDATA",
+        "PROGRAMFILES",
+        "PROGRAMFILES(X86)",
+        "XDG_CONFIG_HOME",
+        "XDG_DATA_HOME",
+        "STEAM_COMPAT_CLIENT_INSTALL_PATH",
+        "PHASEPAL_GATEWAY_PATH",
+        "PHASEPAL_MCP_DESCRIPTOR"
+      ]
+    }
+  }
+}
